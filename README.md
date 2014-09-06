@@ -1,6 +1,6 @@
 # Animatedgifme
 
-TODO: Write a gem description
+A ruby library for http://animatedgif.me
 
 ## Installation
 
@@ -20,11 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+Animatedgifme.find(768)
+#=> "http://i.imgur.com/8kJyPo2.gif"
+
+Animatedgifme.tagged("cat")
+#=> "http://i.imgur.com/UAfxER2.gif"
+
+Animatedgifme.find("cat")
+#=> "http://i.imgur.com/dEd7bFG.gif"
+```
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/animatedgifme/fork )
+1. Fork it ( https://github.com/excid3/animatedgifme/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
