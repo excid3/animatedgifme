@@ -6,14 +6,19 @@ module Animatedgifme
   base_uri "animatedgif.me"
 
   def self.find(id)
-    get("/gifs/#{id}.json").parsed_response["url"]
+    retrieve_url "/gifs/#{id}.json"
   end
 
   def self.tagged(tag)
-    get("/#{tag}.json").parsed_response["url"]
+    retrieve_url "/#{tag}.json"
   end
 
   def self.random(tag)
     tagged(tag)
   end
+
+  def self.retrieve_url(response)
+    get(response).parsed_response["url"]
+  end
+  
 end
